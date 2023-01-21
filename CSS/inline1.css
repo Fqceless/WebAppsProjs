@@ -111,9 +111,9 @@ a {
     padding: 1px;
 }
     .grid-Schedule > div {
-        background-color: rgb(164, 103, 241, 0.90);
+        background-color: rgb(183, 176, 238, 0.98);
         text-align: center;
-        padding: 15px 0;
+        padding: 5px 0;
     }
 
     .grid-container > div {
