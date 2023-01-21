@@ -91,7 +91,7 @@ a {
         'upperleft upperright upperright upperright upperright upperright '
         'bottomleft bottomright bottomright bottomright bottomright bottomright';
     gap: 10px;
-    background-color: #2196F3;
+    background-color: #2b003e;
     padding: 10px;
 }
 .grid-Schedule {
@@ -102,15 +102,15 @@ a {
         'F2023 Sp2024 Su2024'
         'F2024 Sp2025 Su2025';
     gap: 10px;
-    background-color: #2196F3;
-    padding: 10px;
+    background-color: #2c1100;
+    padding: 1px;
 }
     .grid-Schedule > div {
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: rgb(164, 103, 241, 0.90);
         text-align: center;
-        padding: 20px 0;
+        padding: 15px 0;
     }
 
     .grid-container > div {
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: rgb(183, 176, 238, 0.98);
     }
