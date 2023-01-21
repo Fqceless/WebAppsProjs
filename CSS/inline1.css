@@ -89,6 +89,9 @@ a:hover{
     grid-area: bottomright;
 }
 
+.Monthbox {
+    list-style: square;
+}
 .Monthbox-F2021 {
     grid-area: F2021
 }
@@ -156,9 +159,6 @@ a:hover{
     background-color: #006211;
     padding: 3px;
 }
-    .grid-Schedule > ul{
-        list-style-type:none
-    }
     
     .grid-Schedule > div {
         background-color: rgb(189, 237, 157, 0.98);
