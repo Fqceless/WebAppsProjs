@@ -36,6 +36,15 @@ a {
     grid-area: bottomright;
 }
 
+.Monthbox-F2021 {
+    grid-area: F2021
+}
+.Monthbox-Su2022 {
+    grid-area: Su2022
+}
+.Monthbox-Sp2022 {
+    grid-area: Sp2022
+}
 .grid-container {
     display: grid;
     grid-template-areas:
