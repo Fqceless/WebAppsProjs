@@ -22,6 +22,11 @@ a {
     grid-template-areas: "headerLogo headerCol headerCol";
 }
 
+.logoText{
+    font-size: 72px;
+    font-family: "Comic Sans MS", "Comic Sans";
+}
+
 .courseReqs {
     grid-area: upperleft;
 }
