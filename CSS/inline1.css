@@ -14,8 +14,13 @@ body {
  background:0 0
 }
 a {
- outline:0;
+    color: blue;
 }
+
+a:hover{
+    color:purple;
+}
+
 .head {
     grid-area: header;
     display: grid;
@@ -37,6 +42,11 @@ a {
 
 .validation {
     grid-area: bottomleft;
+}
+
+.linksHeader{
+    text-align: center;
+    font-size: 24px; 
 }
 
 .courseFinder {
