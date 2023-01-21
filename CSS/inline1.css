@@ -24,12 +24,19 @@ a:hover{
 .head {
     grid-area: header;
     display: grid;
-    grid-template-areas: "headerLogo headerCol headerCol";
+    grid-template-areas: "headerLogo whitespace studentInfo headerButtons";
 }
 
 .logoText{
     font-size: 72px;
     font-family: "Comic Sans MS", "Comic Sans";
+}
+
+.studentInfo{
+    display: grid;
+    grid-template-areas: 
+        'infoStudent infoMajor'
+        'infoBottom infoMinor';
 }
 
 .courseReqs {
