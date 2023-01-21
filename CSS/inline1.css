@@ -102,9 +102,9 @@ a:hover{
 .grid-container {
     display: grid;
     grid-template-areas:
-        'header header header header header header'
-        'upperleft upperright upperright upperright upperright upperright '
-        'bottomleft bottomright bottomright bottomright bottomright bottomright';
+        'header header header header header header header'
+        'upperleft upperright upperright upperright upperright upperright upperright '
+        'bottomleft bottomright bottomright bottomright bottomright bottomright bottomright';
     gap: 10px;
     background-color: #2b003e;
     padding: 10px;
