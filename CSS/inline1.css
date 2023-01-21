@@ -65,7 +65,15 @@ a:hover{
 
 .headerButtons{
     display: grid;
-    grid-template-areas: 'logOut options save';
+    grid-template-areas: 'headButton headButton headButton';
+}
+
+.headButton{
+    background-color: rgba(130, 121, 202, 0.98);
+}
+
+.headButton:hover{
+    background-color: rgba(166, 116, 206, 0.98);
 }
 
 .courseReqs {
