@@ -39,6 +39,13 @@ a:hover{
         'infoBottom infoMinor';
 }
 
+.infoStudent{
+    display: flex;
+    align-self: flex-end;
+    margin: 0px 0px;
+    padding: 0px;
+}
+
 .courseReqs {
     grid-area: upperleft;
 }
