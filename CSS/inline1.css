@@ -45,6 +45,43 @@ a {
 .Monthbox-Sp2022 {
     grid-area: Sp2022
 }
+
+.Monthbox-F2022 {
+    grid-area: F2022
+}
+
+.Monthbox-Su2023 {
+    grid-area: Su2023
+}
+
+.Monthbox-Sp2023 {
+    grid-area: Sp2023
+}
+
+.Monthbox-F2023 {
+    grid-area: F2023
+}
+
+.Monthbox-Su2024 {
+    grid-area: Su2024
+}
+
+.Monthbox-Sp2024 {
+    grid-area: Sp2024
+}
+
+.Monthbox-F2024 {
+    grid-area: F2024
+}
+
+.Monthbox-Su2025 {
+    grid-area: Su2025
+}
+
+.Monthbox-Sp2025 {
+    grid-area: Sp2025
+}
+
 .grid-container {
     display: grid;
     grid-template-areas:
@@ -58,10 +95,10 @@ a {
 .grid-Schedule {
     display: grid;
     grid-template-areas:
-        'F2021 Su2022 Sp2022'
-        'F2022 Su2023 Sp2023'
-        'F2023 Su2024 Sp2024'
-        'F2024 Su2025 Sp2025';
+        'F2021 Sp2022 Su2022'
+        'F2022 Sp2023 Su2023'
+        'F2023 Sp2024 Su2024'
+        'F2024 Sp2025 Su2025';
     gap: 10px;
     background-color: #2196F3;
     padding: 10px;
