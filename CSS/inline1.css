@@ -18,6 +18,8 @@ a {
 }
 .head {
     grid-area: header;
+    display: grid;
+    grid-template-areas: "headerLogo headerCol headerCol";
 }
 
 .courseReqs {
@@ -113,8 +115,3 @@ a {
     .grid-container > div {
         background-color: rgba(255, 255, 255, 0.8);
     }
-
-.head{
-    display: grid;
-    grid-template-areas: "headerLogo headerCol headerCol";
-}
