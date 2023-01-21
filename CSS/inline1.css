@@ -134,6 +134,10 @@ a:hover{
     background-color: #006211;
     padding: 3px;
 }
+    .grid-Schedule > ul{
+        list-style-type:none
+    }
+    
     .grid-Schedule > div {
         background-color: rgb(189, 237, 157, 0.98);
         text-align: center;
