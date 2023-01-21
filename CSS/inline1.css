@@ -17,23 +17,23 @@ a {
  outline:0;
  text-decoration:none
 }
-.item1 {
+.head {
     grid-area: header;
 }
 
-.item2 {
+.courseReqs {
     grid-area: upperleft;
 }
 
-.item3 {
+.schedule {
     grid-area: upperright;
 }
 
-.item4 {
+.validation {
     grid-area: bottomleft;
 }
 
-.item5 {
+.courseFinder {
     grid-area: bottomright;
 }
 
@@ -46,16 +46,11 @@ a {
     gap: 10px;
     background-color: #2196F3;
     padding: 10px;
-    
 }
-.grid-Schedule {
-    display: grid;
-    grid-template-areas:
-        'F2021 Su2022 Sp2022'
-        'F2022 Su2023 Sp2023'
-        'F2023 Su2024 Sp2024'
-        'F2024 Su2025 Sp2025';
-    gap: 10px;
-    background-color: #2196F3;
-    padding: 10px;
-}
+
+    .grid-container > div {
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+    }
