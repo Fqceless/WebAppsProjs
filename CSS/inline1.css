@@ -39,11 +39,28 @@ a:hover{
         'infoBottom infoMinor';
 }
 
+.infoP{
+    margin: 0px;
+}
+
 .infoStudent{
     display: flex;
     align-self: flex-end;
-    margin: 0px 0px;
-    padding: 0px;
+}
+
+.infoMajor{
+    display: flex;
+    align-self: flex-end;
+}
+
+.infoCatalog{
+    display: flex;
+    align-self: flex-start;
+}
+
+.infoMinor{
+    display: flex;
+    align-self: flex-start;
 }
 
 .courseReqs {
