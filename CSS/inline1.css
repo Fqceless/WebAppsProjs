@@ -22,11 +22,11 @@ a {
 }
 
 .item2 {
-    grid-area: menu;
+    grid-area: upperleft;
 }
 
 .item3 {
-    grid-area: main;
+    grid-area: upperright;
 }
 
 .item4 {
@@ -34,15 +34,15 @@ a {
 }
 
 .item5 {
-    grid-area: footer;
+    grid-area: bottomright;
 }
 
 .grid-container {
     display: grid;
     grid-template-areas:
         'header header header header header header'
-        'menu main main main main main '
-        'bottomleft footer footer footer footer footer';
+        'upperleft upperright upperright upperright upperright upperright '
+        'bottomleft bottomright bottomright bottomright bottomright bottomright';
     gap: 10px;
     background-color: #2196F3;
     padding: 10px;
