@@ -82,6 +82,10 @@ a {
     grid-area: Sp2025
 }
 
+.LabelC {
+    grid-area: Label
+}
+
 .grid-container {
     display: grid;
     grid-template-areas:
@@ -95,7 +99,7 @@ a {
 .grid-Schedule {
     display: grid;
     grid-template-areas:
-        'header header header'
+        'Label Label Label'
         'F2021 Sp2022 Su2022'
         'F2022 Sp2023 Su2023'
         'F2023 Sp2024 Su2024'
