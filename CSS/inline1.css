@@ -47,6 +47,17 @@ a {
     background-color: #2196F3;
     padding: 10px;
 }
+.grid-Schedule {
+    display: grid;
+    grid-template-areas:
+        'F2021 Su2022 Sp2022'
+        'F2022 Su2023 Sp2023'
+        'F2023 Su2024 Sp2024'
+        'F2024 Su2025 Sp2025';
+    gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+}
 
     .grid-container > div {
         background-color: rgba(255, 255, 255, 0.8);
