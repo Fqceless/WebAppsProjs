@@ -63,6 +63,11 @@ a:hover{
     align-self: flex-start;
 }
 
+.headerButtons{
+    display: grid;
+    grid-template-areas: 'logOut options save';
+}
+
 .courseReqs {
     grid-area: upperleft;
 }
