@@ -17,6 +17,23 @@ a:hover{
     color:purple;
 }
 
+
+#testdrag {
+    position: absolute;
+    z-index: 9;
+    background-color: #f1f1f1;
+    border: 1px solid #d3d3d3;
+    text-align: center;
+  }
+  
+  #testdragheader {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #9521f3;
+    color: #fff;
+  }
+
 /*Main Grid CSS Styles*/
 .grid-container {
     display: grid;
@@ -71,10 +88,15 @@ a:hover{
     align-self: flex-start;
 }
 .headerButtons{
+    margin: 5px;
     display: grid;
+    gap: 5px;
     grid-template-areas: 'headButton headButton headButton';
 }
 .headerButtons button{
+    border-radius: 15px;
+    border: 2px solid;
+    padding: 5px;
     background-color: rgba(130, 121, 202, 0.98);
 }
 .headerButtons button:hover{
@@ -98,7 +120,7 @@ a:hover{
         'Monthbox Monthbox Monthbox'
         'Monthbox Monthbox Monthbox';
     gap: 10px;
-    background-color: #006211;
+    background-color: #4b240a;
     padding: 3px;
 }
 .grid-Schedule div {
@@ -107,6 +129,9 @@ a:hover{
     padding: 5px 0;
 }
 .Monthbox{
+    border-radius: 20px;
+    border: 2px solid #73AD21;
+    height: 15vmin;
     display: grid;
 }
 .Monthbox h1{
