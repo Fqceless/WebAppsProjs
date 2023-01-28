@@ -5,11 +5,8 @@
     <title>Web Apps Project 1</title>
     <link rel="shortcut icon" type="image/x-icon" href="pictures/GRAPElogo.png">   
     <link rel="stylesheet" href="CSS/inline1.css">
-    
+    <script src="Scripts/basicFunctions.js"></script>
 </head>
-
-
-
 <body>
 
     <div class="grid-container">
@@ -20,23 +17,26 @@
             </div>
 
             <div class="studentInfo">
-                <div id="infoStudent">
-                    <p class="infoP"><strong>Student:</strong> Jo mama</p>
-                </div>
+                              
+                    <div id="infoStudent">
+                        <p class="infoP"><strong>Student:</strong> Joe Mamma</p>
+                        
+                    </div>
 
-                <div id="infoMajor">
-                    <p class="infoP"><strong>Major:</strong> Computer Science</p>
-                </div>
+                    <div id="infoMajor">
+                        <p class="infoP"><strong>Major:</strong> Computer Science</p>
+                    </div>
 
-                <div id="infoCatalog">
-                    <p class="infoP"><strong>Catalog:</strong> 1994</p>
-                </div>
+                    <div id="infoCatalog">
+                        <p class="infoP"><strong>Catalog:</strong> 1994</p>
+                    </div>
 
-                <div id="infoMinor">
-                    <p class="infoP"><strong>Minor:</strong> Bible</p>
-                </div>
+                    <div id="infoMinor">
+                        <p class="infoP"><strong>Minor:</strong> Bible</p>
+                    </div>
+                
             </div>
-
+            
             <div class="headerButtons">
                 <button>
                     <img src="Pictures/powerOff.png" alt="log out"><br>
@@ -47,27 +47,33 @@
                     <strong>Options</strong>
                 </button>
                 <button>
-                    <img src="Pictures/saveAs.png" alt="save"><br>
+                    <img src="Pictures/saveAs.png" alt="save" onclick="clickCounter()"><br>
                     <strong>Save</strong>
                 </button>
             </div>
         </div>
 
-        <div class="courseReqs">
+        <div class="courseReqs" ondrop="drop(event)" ondragover="allowDrop(event)">
             <p>Placeholder</p>
             <!-- Draggable DIV -->
-            <div id="testdrag">
-                <div id="testdragheader">Click here to move</div>
-                <p>Move</p>
-                <p>this</p>
-                <p>please :3</p>
+            <div class="basicDragbox" id="testdrag" draggable="true" ondragstart="drag(event)" >
+                <div class="basicDragboxheader" id="testdragheader">Click here to move</div>
+                <p>:3 this can be put in the F2021 box :3</p>
+                <p>I don't change color</p>
+                
             </div>
-            <script src="Scripts/drag.js"></script>
+            <div class="basicDragbox" id="testdrag2" draggable="true" ondragstart="drag(event)" >
+                <div class="basicDragboxheader" id="testdragheader3">Click here to move</div>
+                <p>:3 this can be put in the F2021 box :3</p>
+                <p>I change color</p>
+                
+            </div>
+            
         </div>
 
         <div class="schedule">        
-            <div class="grid-Schedule">
-                <div class="Monthbox" id="F2021">
+            <div class="grid-Schedule" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="Monthbox" id="F2021" ondrop="drop(event)" ondragover="allowDrop(event)">
                     <h1>Fall 2021</h1>
                     <ul>
                         <li>CS-1210 C++ Programming</li>
@@ -152,7 +158,7 @@
         </div>
 
         <div class="courseFinder">
-            
+            <div id="result" name="result"></div>
         </div>
     </div>
 </body>

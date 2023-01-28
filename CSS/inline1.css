@@ -16,24 +16,6 @@ a {
 a:hover{
     color:purple;
 }
-
-
-#testdrag {
-    position: absolute;
-    z-index: 9;
-    background-color: #f1f1f1;
-    border: 1px solid #d3d3d3;
-    text-align: center;
-  }
-  
-  #testdragheader {
-    padding: 10px;
-    cursor: move;
-    z-index: 10;
-    background-color: #9521f3;
-    color: #fff;
-  }
-
 /*Main Grid CSS Styles*/
 .grid-container {
     display: grid;
@@ -46,7 +28,7 @@ a:hover{
     padding: 10px;
 }
 .grid-container > div {
-    background-color: rgb(183, 176, 238, 0.98);
+    background-color: rgb(183, 176, 238);
 }
 
 /*Header CSS Styles*/
@@ -156,3 +138,35 @@ a:hover{
 .courseFinder {
     grid-area: bottomright;
 }
+
+/*drag boxes*/
+#testdrag {
+    position: absolute;
+    z-index: 9;
+    background-color: rgb(221, 136, 187);
+    border: 3px solid rgb(224, 48, 224);
+    text-align: center;
+  }
+  
+#testdragheader {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: rgb(83, 40, 6);
+    color: #fff;
+  }
+.basicDragbox{
+    position: absolute;
+    z-index: 9;
+    background-color: rgb(241, 184, 219);
+    border: 3px solid rgb(67, 7, 145);
+    text-align: center;
+  }
+  
+.basicDragboxheader {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: rgb(2, 148, 9);
+    color: #fff;
+  }
