@@ -5,7 +5,8 @@
     <title>Web Apps Project 1</title>
     <link rel="shortcut icon" type="image/x-icon" href="pictures/GRAPElogo.png">   
     <link rel="stylesheet" href="CSS/inline1.css">
-    <script src="Scripts/basicFunctions.js"></script>
+    <script src="js/basicFunctions.js"></script>
+    <script src="js/getInformation.js"></script>
 </head>
 <body>
 
@@ -17,7 +18,12 @@
             </div>
 
             <div class="studentInfo">
-                              
+                <form id="form">
+                    <input type="text" id="name" placeholder="Name">
+                    <input type="email" id="email" placeholder="Email">
+                    <button type="submit">Submit</button>
+                  </form>
+
                     <div id="infoStudent">
                         <p class="infoP"><strong>Student:</strong> Joe Mamma</p>
                         
