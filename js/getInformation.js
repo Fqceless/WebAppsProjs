@@ -3,9 +3,11 @@ form.addEventListener("submit", function (event) {
   event.preventDefault();
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
+  const startYear = document.getElementById("startYear").value;
+  const lname = document.getElementById("lname").value;
 
   // Validate form on submit
-  if (!name || !email) {
+  if (!fname || !email || !startYear || !lname) {
     alert("Please fill out all fields");
     return;
   }
@@ -18,8 +20,22 @@ form.addEventListener("submit", function (event) {
   }
 
   // Validate name using regex
-  const nameRegex = /^[a-zA-Z]+$/;
-  if (!name.match(nameRegex)) {
+  const fnameRegex = /^[a-z ]+$/i;
+  if (!fname.match(fnameRegex)) {
+    alert("Please enter a valid name");
+    return;
+  }
+
+  // Validate name using regex
+  const startYearRegex = /^"20"+[1-9]{2}+$/;
+  if (!startYear.match(startYearRegex)) {
+    alert("Please enter a valid year");
+    return;
+  }
+
+  // Validate name using regex
+  const lnameRegex = /^[a-z ]+$/i;
+  if (!lname.match(lnameRegex)) {
     alert("Please enter a valid name");
     return;
   }

@@ -19,8 +19,11 @@
 
             <div class="studentInfo">
                 <form id="form">
-                    <input type="text" id="name" placeholder="Name">
+                    <input type="text" id="fname" placeholder="First Name">
+                    <input type="text" id="lname" placeholder="Last Name">
+                    <input type="text" id="startYear" placeholder="20XX Starting Year">
                     <input type="email" id="email" placeholder="Email">
+                    
                     <button type="submit">Submit</button>
                   </form>
 
@@ -61,7 +64,7 @@
 
         <div class="courseReqs" ondrop="drop(event)" ondragover="allowDrop(event)">
             <p>Placeholder</p>
-            <!-- Draggable DIV -->
+            <!-- Draggable DIV 
             <div class="basicDragbox" id="testdrag" draggable="true" ondragstart="drag(event)" >
                 <div class="basicDragboxheader" id="testdragheader">Click here to move</div>
                 <p>:3 this can be put in the F2021 box :3</p>
@@ -74,12 +77,18 @@
                 <p>I change color</p>
                 
             </div>
-            
+            -->
         </div>
 
         <div class="schedule">        
             <div class="grid-Schedule" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <div class="Monthbox" id="F2021" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="Monthbox" id="Tranfer">
+                    <h1>Transfered credits</h1>
+                    <ul>
+                        <li>LIGMA-1020 egg</li>
+                    </ul>
+                </div>
+                <div class="Monthbox" id="F2021">
                     <h1>Fall 2021</h1>
                     <ul>
                         <li>CS-1210 C++ Programming</li>
@@ -145,12 +154,7 @@
                         <li>CS-4820 Software Engineering II</li>
                     </ul>
                 </div>
-                <div class="Monthbox" id="Su2025">
-                    <h1>Summer 2025</h1>
-                    <ul>
-                        <li>LIFE-1000 Get a Job</li>
-                    </ul>
-                </div>
+                
             </div>
         </div>
 
