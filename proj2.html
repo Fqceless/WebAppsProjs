@@ -6,7 +6,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="pictures/GRAPElogo.png">   
     <link rel="stylesheet" href="CSS/inline1.css">
     <script src="js/basicFunctions.js"></script>
-    <script src="js/getInformation.js"></script>
+    
     <script src="js/objects.js"></script>
 </head>
 <body>
@@ -20,15 +20,17 @@
 
             <div class="studentInfo">
                 
-                    
-                <<form id="form">
-                    <input type="text" id="fname" placeholder="First Name">
-                    <input type="text" id="lname" placeholder="Last Name">
-                    <input type="text" id="startYear" placeholder="20XX Starting Year">
-                    <input type="email" id="email" placeholder="Email">
-                    
-                    <button type="submit">Submit</button>
+                
+                  <form id="form" method='post' action="http://judah.cedarville.edu/echo.php">
+                    <input type="text" id="fname" name="fname" placeholder="First Name">
+                    <input type="text" id="lname" name="lname" placeholder="Last Name">
+                    <input type="text" id="startYear" name="startYear" placeholder="20XX Starting Year">
+                    <input type="email" id="email" name="email" placeholder="Email">
+
+                    <input type="submit" value="Submit" id="done">
                   </form>
+                  <script src="js/getInformation.js"></script>
+                  
 
                     <div id="infoStudent">
                         <p class="infoP"><strong>Student:</strong> Joe Mamma</p>
