@@ -27,7 +27,7 @@ myform.addEventListener("keyup", function (event) {
 });
 
 function ValidateForm(){
-  fname = document.getElementById("fname").value;
+    fname = document.getElementById("fname").value;
     email = document.getElementById("email").value;
     startYear = document.getElementById("startYear").value;
     lname = document.getElementById("lname").value;
