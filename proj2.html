@@ -18,19 +18,7 @@
                 <p><strong>V</strong>alentine's <strong>A</strong>cademic <strong>P</strong>lanning <strong>E</strong>nvironment</p>
             </div>
 
-            <div class="studentInfo">
-                
-                
-                  <form id="form" method='post' action="http://judah.cedarville.edu/echo.php">
-                    <input type="text" id="fname" name="fname" placeholder="First Name">
-                    <input type="text" id="lname" name="lname" placeholder="Last Name">
-                    <input type="text" id="startYear" name="startYear" placeholder="20XX Starting Year">
-                    <input type="email" id="email" name="email" placeholder="Email">
-
-                    <input type="submit" value="Submit" id="done">
-                  </form>
-                  <script src="js/getInformation.js"></script>
-                  
+            <div class="studentInfo">                  
 
                     <div id="infoStudent">
                         <p class="infoP"><strong>Student:</strong> Joe Mamma</p>
@@ -174,6 +162,15 @@
 
         <div class="courseFinder">
             <div id="result" name="result"></div>
+            <form id="form" method='post' action="http://judah.cedarville.edu/echo.php">
+                <input type="text" id="fname" name="fname" placeholder="First Name">
+                <input type="text" id="lname" name="lname" placeholder="Last Name">
+                <input type="text" id="startYear" name="startYear" placeholder="20XX Starting Year">
+                <input type="email" id="email" name="email" placeholder="Email">
+
+                <input type="submit" value="Submit" id="done">
+              </form>
+              <script src="js/getInformation.js"></script>
         </div>
     </div>
 </body>
