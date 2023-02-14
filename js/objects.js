@@ -47,3 +47,30 @@ year2023.springArray.push(myPlan.courseArray[0]);
 console.log(myPlan);
 console.log(webApps);
 console.log(year2023);
+
+
+let semesters = [
+    {
+      term: 'Fall',
+      year: 2021,
+      courses: [
+        {
+          courseNum: 'CS-1210',
+          courseName: 'C++ Programming',
+          courseCredits: 3
+        }
+      ]
+    },
+    {
+      term: 'Spring',
+      year: 2022,
+      courses: []
+    },
+    {
+      term: 'Fall',
+      year: 2023,
+      courses: []
+    }
+  ];
+
+  

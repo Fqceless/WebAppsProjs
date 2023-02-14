@@ -1,6 +1,5 @@
 let myform = document.getElementById("form");
 
-
 myform.addEventListener("submit", function (event) {
   event.preventDefault();
  
@@ -44,7 +43,7 @@ function ValidateForm(){
     //Validate form filling
     if (!fname || !email || !startYear || !lname) {
       Validated = 1;
-     
+      
     }
 
     let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
