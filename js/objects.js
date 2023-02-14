@@ -49,28 +49,51 @@ console.log(webApps);
 console.log(year2023);
 
 
-let semesters = [
+
+let YearArray = [
+    
     {
-      term: 'Fall',
-      year: 2021,
-      courses: [
-        {
-          courseNum: 'CS-1210',
-          courseName: 'C++ Programming',
-          courseCredits: 3
-        }
-      ]
+        year: 2021,
+        semester:[
+            {
+                term: 'Fall',
+                courses: [
+                    {
+                        year: 2021,
+                        term: 'Fall',
+                        courseNum: 'CS-1210',
+                        courseName: 'C++ Programming',
+                        courseCredits: 3
+                    }
+                ]
+            },
+            {
+            term: 'Spring',
+            courses: []
+            },
+            {
+            term: 'Summer',
+            courses: []
+            }
+        ]
     },
     {
-      term: 'Spring',
-      year: 2022,
-      courses: []
-    },
-    {
-      term: 'Fall',
-      year: 2023,
-      courses: []
+        year: 2022,
+        semester:[
+            {
+                term: 'Fall',
+                courses: []
+            },
+            {
+                term: 'Spring',
+                courses: []
+            },
+            {
+                term: 'Summer',
+                courses: []
+            }
+        ]
     }
-  ];
+];
 
   

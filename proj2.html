@@ -43,14 +43,19 @@
                     <img src="Pictures/powerOff.png" alt="log out"><br>
                     <strong>Log Out</strong>
                 </button>
-                <button id="optionsButton">
-                    <img src="Pictures/settingsCog.png" alt="options"><br>
-                    <strong>Options</strong>
-                </button>
-                <ul id="test" hidden>
-                    <li>hello world</li>
-                    <li>goodbye world</li>
-                </ul>
+            
+                <div class="options">
+                    <button>
+                        <img src="Pictures/settingsCog.png" alt="Options"><br>
+                        <strong>Options</strong>
+                    </button>
+                    <div class="options-list">
+                        <button>Create Plan</button>
+                        <button>Manage Plan</button>
+                        <button>Show Grades</button>
+                        <button>Change Theme</button>
+                    </div>
+                </div> 
                 <button>
                     <img src="Pictures/saveAs.png" alt="save" onclick="clickCounter()"><br>
                     <strong>Save</strong>
@@ -60,20 +65,7 @@
 
         <div class="courseReqs" ondrop="drop(event)" ondragover="allowDrop(event)">
             <p>Placeholder</p>
-            <!-- Draggable DIV 
-            <div class="basicDragbox" id="testdrag" draggable="true" ondragstart="drag(event)" >
-                <div class="basicDragboxheader" id="testdragheader">Click here to move</div>
-                <p>:3 this can be put in the F2021 box :3</p>
-                <p>I don't change color</p>
-                
-            </div>
-            <div class="basicDragbox" id="testdrag2" draggable="true" ondragstart="drag(event)" >
-                <div class="basicDragboxheader" id="testdragheader3">Click here to move</div>
-                <p>:3 this can be put in the F2021 box :3</p>
-                <p>I change color</p>
-                
-            </div>
-            -->
+            
         </div>
 
         <div class="schedule">        
@@ -84,29 +76,7 @@
                         <li>LIGMA-1020 egg</li>
                     </ul>
                 </div>
-                <script>
-                    for (let semester of semesters) {
-    let monthbox = `
-      <div class="Monthbox" id="${semester.term}${semester.year}">
-        <h1>${semester.term} ${semester.year}</h1>
-        <ul>
-    `;
-
-    for (let course of semester.courses) {
-      monthbox += `
-        <li>${course.courseNum} ${course.courseName} ${course.courseCredits}</li>
-      `;
-    }
-
-    monthbox += `
-        </ul>
-      </div>
-    `;
-
-    document.write(monthbox);
-  }
-                  </script>
-                
+                              
             </div>
         </div>
 
@@ -120,7 +90,7 @@
         </div>
 
         <div class="courseFinder">
-            <div id="result" name="result"></div>
+            <div id="result"></div>
             <form id="form" method='post' action="http://judah.cedarville.edu/echo.php">
                 <input type="text" id="fname" name="fname" placeholder="First Name">
                 <input type="text" id="lname" name="lname" placeholder="Last Name">
@@ -133,4 +103,5 @@
         </div>
     </div>
 </body>
+
 </html>
