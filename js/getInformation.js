@@ -75,3 +75,11 @@ function ValidateForm(){
   //good
   return Validated;
 }
+
+
+//options button for plans drop-down
+let optionsButton = document.getElementById("optionsButton");
+optionsButton.addEventListener(onclick, function(){
+  getElementById("test").style.visibility = "visible";
+  console.log("hello");
+});
