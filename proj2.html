@@ -84,28 +84,6 @@
                         <li>LIGMA-1020 egg</li>
                     </ul>
                 </div>
-                <script>
-                    for (let semester of semesters) {
-    let monthbox = `
-      <div class="Monthbox" id="${semester.term}${semester.year}">
-        <h1>${semester.term} ${semester.year}</h1>
-        <ul>
-    `;
-
-    for (let course of semester.courses) {
-      monthbox += `
-        <li>${course.courseNum} ${course.courseName} ${course.courseCredits}</li>
-      `;
-    }
-
-    monthbox += `
-        </ul>
-      </div>
-    `;
-
-    document.write(monthbox);
-  }
-                  </script>
                 
             </div>
         </div>

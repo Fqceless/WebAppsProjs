@@ -1,47 +1,56 @@
-let plan = {
-    planName: '',
-    catYear: '',
-    major: '',
-    minor: '',
-    studentName: '',
-    currYear: '',
-    currTerm: '',
-    courseArray: []
-};
+class plan {
+    constructor(planName, catYear, major, minor, studentName, currYear, currTerm) {
+        this.planName = planName;
+        this.catYear = catYear;
+        this.major = major;
+        this.minor = minor;
+        this.studentName = studentName;
+        this.currYear = currYear;
+        this.currTerm = currTerm;
+        this.courseArray = [];
+    }
+}
 
-let course = {
-    term: '',
-    year: '',
-    courseNum: '',
-    courseName: ''
-};
+class course{
+    constructor(term, year, courseId, courseName, credits){
+        this.term = term;
+        this.year = year;
+        this.courseId = courseId;
+        this.courseName = courseName;
+        this.credits = credits;
+    }
+}
 
-let year = {
-    year: '',
-    springArray: [],
-    summerArray: [],
-    fallArray: []
-};
+class year{
+    constructor(yearNum){
+        this.yearNum = yearNum;
+        this.springArray = [];
+        this.summerArray = [];
+        this.fallArray = [];
+    }
+}
 
-let myPlan = plan;
-myPlan.planName = 'Test Plan';
-myPlan.catYear = '2022';
-myPlan.major = 'Computer Science';
-myPlan.minor = 'Biblical Studies';
-myPlan.studentName = 'Joseph Mother';
-myPlan.currYear = '2023';
-myPlan.currTerm = 'Spring';
+let myPlan = new plan(
+    'Test Plan',
+    '2022',
+    'Computer Science',
+    'Biblical Studies',
+    'Joseph Mother',
+    '2023',
+    'Spring'
+);
 
-let webApps = course;
-webApps.term = 'Spring';
-webApps.year = '2023';
-webApps.courseNum = 'CS-3220';
-webApps.courseName = 'Web Applications';
+let webApps = new course(
+    'Spring',
+    '2023',
+    'CS-3220',
+    'Web Applications',
+    '3'
+);
 
 myPlan.courseArray.push(webApps);
 
-let year2023 = year;
-year2023.year = '2023';
+let year2023 = new year(2023);
 year2023.springArray.push(myPlan.courseArray[0]);
 
 console.log(myPlan);
@@ -51,15 +60,10 @@ console.log(year2023);
 
 let semesters = [
     {
-      term: 'Fall',
-      year: 2021,
-      courses: [
-        {
-          courseNum: 'CS-1210',
-          courseName: 'C++ Programming',
-          courseCredits: 3
-        }
-      ]
+        yearNum: 2021,
+        fallArray: [
+
+        ]
     },
     {
       term: 'Spring',
@@ -73,4 +77,23 @@ let semesters = [
     }
   ];
 
-  
+  for (let semester of semesters) {
+    let monthbox = `
+    <div class="Monthbox" id="${semester.term}${semester.year}">
+    <h1>${semester.term} ${semester.year}</h1>
+    <ul>
+    `;
+    
+    for (let course of semester.courses) {
+    monthbox += `
+    <li>${course.courseNum} ${course.courseName} ${course.courseCredits}</li>
+    `;
+    }
+    
+    monthbox += `
+    </ul>
+    </div>
+    `;
+    
+    document.write(monthbox);
+    }
