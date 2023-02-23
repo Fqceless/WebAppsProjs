@@ -41,7 +41,6 @@ $(document).ready(function() {
                 }
             }
         }
-        console.log('help')
     }
     function askCatalog(askingCourse, refCatalog){
         id2try = askingCourse.id;
@@ -51,7 +50,6 @@ $(document).ready(function() {
     }
     setTimeout(function(){
         for (let y of yearsArray) {
-            console.log('ahhh');
             for(let s of y.semesters){
                 if(y == yearsArray[0]){
                     s = y.semesters[2];
