@@ -39,11 +39,13 @@ class year{
     }
 }
 
+let yearsArray = [];
+
 let xhttpPlan = new XMLHttpRequest();
 xhttpPlan.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     let response = JSON.parse(this.responseText);
-    processResponse(response);
+    processPlan(response);
     
     // process the JSON data here
   }
@@ -56,7 +58,7 @@ let xhttpReqs = new XMLHttpRequest();
 xhttpReqs.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     let response = JSON.parse(this.responseText);
-    processResponse(response);
+    processReqs(response);
     
     // process the JSON data here
   }
@@ -65,21 +67,46 @@ xhttpReqs.open("GET", "http://judah.cedarville.edu/~knoerr/cs3220/termProject/ge
 xhttpReqs.setRequestHeader("Content-type", "application/json");
 xhttpReqs.send();
 
-function processResponse(response){
-    let userPlan = new plan(
-        response.plan.name,
-        response.plan.catYear,
-        response.plan.major,
-        'Biblical Studies',
-        response.plan.student,
-        response.plan.currYear,
-        response.plan.currTerm,
-        response.plan.courses
-    );
+function processPlan(response){
+    let currMaxYear = response.plan.catYear;
+    for (let c in response.plan.courses){
+        if (response.plan.courses[c].year > currMaxYear){
+            currMaxYear = response.plan.courses[c].year;
+        }
+    }
+    for (i = response.plan.catYear; i <= currMaxYear; i++){
+        yearsArray.push(new year(i));
+    }
 
-    console.log(response.plan);
-    console.log(userPlan);
+    for (let c in response.plan.courses){
+        for (let y of yearsArray){
+            if(response.plan.courses[c].year == y.yearNum){
+                switch(response.plan.courses[c].term){
+                    case('Spring'): 
+                        y.semesters[0].courses.push(response.plan.courses[c]);
+                        break;
+                    case('Summer'): 
+                        y.semesters[1].courses.push(response.plan.courses[c]);
+                        break;
+                    case('Fall'): 
+                        y.semesters[2].courses.push(response.plan.courses[c]);
+                        break;
+                    default: break;
+                }
+            }
+        }
+    }
+    
+    console.log(yearsArray);
 }
+console.log(yearsArray);
+
+function processReqs(response){
+    console.log('hi mom');
+    
+}
+
+
 
 //ANYTHING PAST HERE IS OBSOLETE, ONLY TO BE USED AS TEST DATA
 /*let myPlan = new plan(

@@ -11,7 +11,7 @@ for (let y of yearsArray) {
     
         for (let course of s.courses) {
             monthbox += `
-            <li>${course.courseId} ${course.courseName} - ${course.credits} credits</li>
+            <li>${course.id}</li>
             `;
         }
     
