@@ -10,9 +10,7 @@ $(document).ready(function() {
     
     function processReqs(response){
         let catalogTable = $('#catalogTable').DataTable({
-            data: response.catalog
-
-            ,
+            data: [],
         columns: [
             { data: 'id', title: 'Course ID' },
             { data: 'name', title: 'Course Name' },
@@ -21,6 +19,8 @@ $(document).ready(function() {
             // add more columns
         ]
         });
+
+        console.log(catalogTable.data);
     
         $('#searchBox').on('keyup', function() {
         catalogTable.search($(this).val()).draw();
