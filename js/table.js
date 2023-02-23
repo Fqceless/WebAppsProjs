@@ -7,12 +7,13 @@ $(document).ready(function() {
             processReqs(response);
         }
     });
-    courselist = {}
+    courselist = [];
     function processReqs(response){
-        courselist = response.catalog.courses;
+        for (c2use in response.catalog.courses)
+        courselist[c2use] = response.catalog.courses[c2use];
     }
     let catalogTable = $('#catalogTable').DataTable({
-        data: [courselist],
+        data: courselist,
     columns: [
         { data: 'id', title: 'Course ID' },
         { data: 'name', title: 'Course Name' },
