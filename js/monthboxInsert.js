@@ -45,7 +45,7 @@ $(document).ready(function() {
     }
     function askCatalog(askingCourse, refCatalog){
         id2try = askingCourse.id;
-        let index = refCatalog.courses.indexOf(id2try);          
+        let index = refCatalog.courses.map(e => e.id).indexOf('id2try');    
         askingCourse.name = refCatalog.courses[index].name;
         return askingCourse;
     }
