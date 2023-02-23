@@ -1,4 +1,4 @@
-/*General CSS Styles test*/
+/*General CSS Styles*/
 html {
     margin:0;
     padding:0;
@@ -119,9 +119,11 @@ html {
    }
    
    /*Upper Right Section CSS Styles*/
-  
+   .schedule {
+       grid-area: upperright;
+   }
    .grid-Schedule {
-        display: grid;
+       display: grid;
        grid-template-areas:
            'Monthbox Monthbox Monthbox'
            'Monthbox Monthbox Monthbox'
@@ -133,7 +135,7 @@ html {
        color: aliceblue;
    }
    .grid-Schedule div {
-       display: grid;
+        display: grid;
        background-color: #2a9d8f;
        text-align: center;
        padding: 5px 0;
