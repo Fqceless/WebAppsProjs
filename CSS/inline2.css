@@ -135,7 +135,7 @@ html {
        color: aliceblue;
    }
    .grid-Schedule div {
-    display: flexbox;
+        display: grid;
        background-color: #2a9d8f;
        text-align: center;
        padding: 5px 0;
@@ -143,7 +143,7 @@ html {
    .Monthbox{
        border-radius: 20px;
        border: 2px solid #e76f51;
-       height: 15vmin;
+       
        display: grid;
        font-size: 15px;
    }
