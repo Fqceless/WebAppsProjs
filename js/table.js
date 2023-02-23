@@ -12,7 +12,7 @@ $(document).ready(function() {
         courselist = response.catalog.courses;
     }
     let catalogTable = $('#catalogTable').DataTable({
-        data: courselist,
+        data: [courselist],
     columns: [
         { data: 'id', title: 'Course ID' },
         { data: 'name', title: 'Course Name' },
