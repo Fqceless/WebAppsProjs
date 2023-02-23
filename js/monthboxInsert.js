@@ -12,6 +12,13 @@ $(document).ready(function() {
     });
 
     function processPlan(response){
+        //$("#infoStudent").append(monthbox);
+        //$('#infoMajor').append(monthbox);
+        //$('#infoCatalog').append(monthbox);
+        //$('#infoMinor').append(monthbox);
+
+
+
         let currMaxYear = response.plan.catYear;
         for (let c in response.plan.courses){
             if (response.plan.courses[c].year > currMaxYear){
