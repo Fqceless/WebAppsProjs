@@ -51,8 +51,7 @@ $(document).ready(function() {
     }
     function askCatalog(askingCourse, refCatalog){
         id2try = askingCourse.id;
-        let index = refCatalog.courses[id2try];   
-        console.log(index);
+        let index = refCatalog.courses[id2try];
         askingCourse.name = index.name;
         return askingCourse;
     }
