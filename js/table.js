@@ -7,23 +7,23 @@ $(document).ready(function() {
             processReqs(response);
         }
     });
-    
+    courselist = {}
     function processReqs(response){
-        let catalogTable = $('#catalogTable').DataTable({
-            data: [],
-        columns: [
-            { data: 'id', title: 'Course ID' },
-            { data: 'name', title: 'Course Name' },
-            { data: 'description', title: 'Course Name' },
-            { data: 'credits', title: 'Credits' },
-            // add more columns
-        ]
-        });
-
-        console.log(catalogTable.data);
-    
-        $('#searchBox').on('keyup', function() {
-        catalogTable.search($(this).val()).draw();
-        });
+        courselist = response.catalog.courses;
     }
+    let catalogTable = $('#catalogTable').DataTable({
+        data: courselist,
+    columns: [
+        { data: 'id', title: 'Course ID' },
+        { data: 'name', title: 'Course Name' },
+        { data: 'description', title: 'Description' },
+        { data: 'credits', title: 'Credits' },
+        // add more columns
+    ]
+    });
+
+    $('#searchBox').on('keyup', function() {
+    catalogTable.search($(this).val()).draw();
+    });
+
 });
