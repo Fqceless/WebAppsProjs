@@ -11,15 +11,6 @@ $(document).ready(function() {
         }
     });
 
-    $.ajax({
-        url: "http://judah.cedarville.edu/~knoerr/cs3220/termProject/getRequirements.php",
-        type: "GET",
-        dataType: "json",
-        success: function(response) {
-            //processReqs(response);
-        }
-    });
-
     function processPlan(response){
         let currMaxYear = response.plan.catYear;
         for (let c in response.plan.courses){
@@ -50,6 +41,7 @@ $(document).ready(function() {
                 }
             }
         }
+        console.log('help')
     }
     function askCatalog(askingCourse, refCatalog, index){
         
@@ -61,6 +53,7 @@ $(document).ready(function() {
     }
     setTimeout(function(){
         for (let y of yearsArray) {
+            console.log('ahhh');
             for(let s of y.semesters){
                 if(y == yearsArray[0]){
                     s = y.semesters[2];
@@ -82,7 +75,7 @@ $(document).ready(function() {
                 </div>
                 `;
 
-                $('body').append(monthbox);
+                $('.grid-Schedule').append(monthbox);
 
                 if(y == yearsArray[0] || y == yearsArray[yearsArray.length - 1]){
                     break;
