@@ -12,10 +12,10 @@ $(document).ready(function() {
     });
 
     function processPlan(response){
-        //$("#infoStudent").append(monthbox);
-        //$('#infoMajor').append(monthbox);
-        //$('#infoCatalog').append(monthbox);
-        //$('#infoMinor').append(monthbox);
+        $("#infoStudent").html("<p class=\"infoP\"><strong>Student:</strong> " + response.plan.student + "</p>");
+        $('#infoMajor').html("<p class=\"infoP\"><strong>Major:</strong> " + response.plan.major + "</p>");
+        $('#infoCatalog').html("<p class=\"infoP\"><strong>Catalog:</strong> " + response.plan.catYear + "</p>");;
+        $('#infoMinor').html("<p class=\"infoP\"><strong>Minor:</strong> Biblical Studies</p>");
 
 
 
