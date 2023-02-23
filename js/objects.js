@@ -39,8 +39,8 @@ class year{
     }
 }
 
-let xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
+let xhttpPlan = new XMLHttpRequest();
+xhttpPlan.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     let response = JSON.parse(this.responseText);
     processResponse(response);
@@ -48,28 +48,37 @@ xhttp.onreadystatechange = function() {
     // process the JSON data here
   }
 };
-xhttp.open("GET", "http://judah.cedarville.edu/~knoerr/cs3220/termProject/getCombined.php", true);
-xhttp.setRequestHeader("Content-type", "application/json");
-xhttp.send();
+xhttpPlan.open("GET", "http://judah.cedarville.edu/~knoerr/cs3220/termProject/getCombined.php", true);
+xhttpPlan.setRequestHeader("Content-type", "application/json");
+xhttpPlan.send();
 
-
+let xhttpReqs = new XMLHttpRequest();
+xhttpReqs.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    let response = JSON.parse(this.responseText);
+    processResponse(response);
+    
+    // process the JSON data here
+  }
+};
+xhttpReqs.open("GET", "http://judah.cedarville.edu/~knoerr/cs3220/termProject/getRequirements.php", true);
+xhttpReqs.setRequestHeader("Content-type", "application/json");
+xhttpReqs.send();
 
 function processResponse(response){
-    if (response.categories == true){
-        let userPlan = new plan(
-            response.plan.name,
-            response.plan.catYear,
-            response.plan.major,
-            'Biblical Studies',
-            response.plan.student,
-            response.plan.currYear,
-            response.plan.currTerm,
-            response.plan.courses
-            );
+    let userPlan = new plan(
+        response.plan.name,
+        response.plan.catYear,
+        response.plan.major,
+        'Biblical Studies',
+        response.plan.student,
+        response.plan.currYear,
+        response.plan.currTerm,
+        response.plan.courses
+    );
 
-        console.log(response.plan);
-        console.log(userPlan);
-    }
+    console.log(response.plan);
+    console.log(userPlan);
 }
 
 //ANYTHING PAST HERE IS OBSOLETE, ONLY TO BE USED AS TEST DATA
