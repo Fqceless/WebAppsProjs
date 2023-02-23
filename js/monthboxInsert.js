@@ -2,31 +2,25 @@ $(document).ready(function() {
 
     yearsArray = [];
 
-    let xhttpPlan = new XMLHttpRequest();
-    xhttpPlan.onreadystatechange = function() {
-    if (this.status == 200) {
-        let response = JSON.parse(this.responseText);
-        processPlan(response);
-        
-        // process the JSON data here
-    }
-    };
-    xhttpPlan.open("GET", "http://judah.cedarville.edu/~knoerr/cs3220/termProject/getCombined.php", true);
-    xhttpPlan.setRequestHeader("Content-type", "application/json");
-    xhttpPlan.send();
+    $.ajax({
+        url: "http://judah.cedarville.edu/~knoerr/cs3220/termProject/getRequirements.php",
+        type: "GET",
+        dataType: "json",
+        success: function(response) {
+            //processReqs(response);
+        }
+    });
+    
+    $.ajax({
+        url: "http://judah.cedarville.edu/~knoerr/cs3220/termProject/getCombined.php",
+        type: "GET",
+        dataType: "json",
+        success: function(response) {
+            processPlan(response);
+        }
+    });
 
-    let xhttpReqs = new XMLHttpRequest();
-    xhttpReqs.onreadystatechange = function() {
-    if ( this.status == 200) {
-        let response = JSON.parse(this.responseText);
-        //processReqs(response);
-        
-        // process the JSON data here
-    }
-    };
-    xhttpReqs.open("GET", "http://judah.cedarville.edu/~knoerr/cs3220/termProject/getRequirements.php", true);
-    xhttpReqs.setRequestHeader("Content-type", "application/json");
-    xhttpReqs.send();
+    
 
     function processPlan(response){
         let currMaxYear = response.plan.catYear;
