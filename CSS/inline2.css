@@ -120,7 +120,7 @@ html {
    
    /*Upper Right Section CSS Styles*/
    .schedule {
-        display: flex;
+        display: grid;
    }
    .grid-Schedule {
         display: grid;
