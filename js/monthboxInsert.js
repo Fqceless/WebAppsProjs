@@ -3,15 +3,6 @@ $(document).ready(function() {
     yearsArray = [];
 
     $.ajax({
-        url: "http://judah.cedarville.edu/~knoerr/cs3220/termProject/getRequirements.php",
-        type: "GET",
-        dataType: "json",
-        success: function(response) {
-            //processReqs(response);
-        }
-    });
-    
-    $.ajax({
         url: "http://judah.cedarville.edu/~knoerr/cs3220/termProject/getCombined.php",
         type: "GET",
         dataType: "json",
@@ -20,7 +11,14 @@ $(document).ready(function() {
         }
     });
 
-    
+    $.ajax({
+        url: "http://judah.cedarville.edu/~knoerr/cs3220/termProject/getRequirements.php",
+        type: "GET",
+        dataType: "json",
+        success: function(response) {
+            //processReqs(response);
+        }
+    });
 
     function processPlan(response){
         let currMaxYear = response.plan.catYear;
@@ -51,39 +49,36 @@ $(document).ready(function() {
                 }
             }
         }
-        
-        
     }
-    
-
-
-    for (let y of yearsArray) {
-        for(let s of y.semesters){
-            if(y == yearsArray[0]){
-                s = y.semesters[2];
-            }
-            let monthbox = `
-            <div class="Monthbox" id="${s.term}${y.yearNum}">
-            <h1>${s.term} ${y.yearNum}</h1>
-            <ul>
-            `;
-        
-            for (let course of s.courses) {
-                monthbox += `
-                <li>${course.id}</li>
+    setTimeout(function(){
+        for (let y of yearsArray) {
+            for(let s of y.semesters){
+                if(y == yearsArray[0]){
+                    s = y.semesters[2];
+                }
+                let monthbox = `
+                <div class="Monthbox" id="${s.term}${y.yearNum}">
+                <h1>${s.term} ${y.yearNum}</h1>
+                <ul>
                 `;
-            }
-        
-            monthbox += `
-            </ul>
-            </div>
-            `;
+            
+                for (let course of s.courses) {
+                    monthbox += `
+                    <li>${course.id}</li>
+                    `;
+                }
+            
+                monthbox += `
+                </ul>
+                </div>
+                `;
 
-            document.write(monthbox);
+                $('body').append(monthbox);
 
-            if(y == yearsArray[0] || y == yearsArray[yearsArray.length - 1]){
-                break;
+                if(y == yearsArray[0] || y == yearsArray[yearsArray.length - 1]){
+                    break;
+                }
             }
         }
-    }
+    },300)
 });
