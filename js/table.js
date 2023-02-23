@@ -1,34 +1,29 @@
 $(document).ready(function() {
-
-
     $.ajax({
         url: "http://judah.cedarville.edu/~knoerr/cs3220/termProject/getCombined.php",
         type: "GET",
         dataType: "json",
         success: function(response) {
-            processCat(response);
+            processReqs(response);
         }
     });
+    
+    function processReqs(response){
+        let catalogTable = $('#catalogTable').DataTable({
+            data: response.catalog
 
-
-    function processCat(response){
-    let catalogTable = $('#catalogTable').DataTable({
-      data: [],
-      columns: [
-        { data: 'id', title: 'Course ID' },
-        { data: 'name', title: 'Course Name' },
-        { data: 'credits', title: 'Credits' },
-        // add more columns
-      ]
-    });
-    for (let c in response.catalog.courses){
-        catalogTable.data.push(response.catalog.courses[c]);
+            ,
+        columns: [
+            { data: 'id', title: 'Course ID' },
+            { data: 'name', title: 'Course Name' },
+            { data: 'description', title: 'Course Name' },
+            { data: 'credits', title: 'Credits' },
+            // add more columns
+        ]
+        });
+    
+        $('#searchBox').on('keyup', function() {
+        catalogTable.search($(this).val()).draw();
+        });
     }
-    console.log(catalogTable.data);
-
-
-    $('#searchBox').on('keyup', function() {
-      catalogTable.search($(this).val()).draw();
-    });
-    }
-  });
+});
