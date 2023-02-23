@@ -56,9 +56,20 @@ var categories = {
   };
   
   $(document).ready(function() {
+
+    $.ajax({
+      url: "http://judah.cedarville.edu/~knoerr/cs3220/termProject/getRequirements.php",
+      type: "GET",
+      dataType: "json",
+      success: function(response) {
+          processReqs(response);
+      }
+  });
+
+
     var accordion = $("#accordion");
-    for (var category in categories) {
-      var courses = categories[category]["courses"];
+    for (var category in response) {
+      var courses = response[category]["courses"];
       var courseList = "";
       for (var i = 0; i < courses.length; i++) {
         courseList += "<li>" + courses[i] + "</li>";
