@@ -38,7 +38,7 @@ yearSelect.addEventListener('change', function() {
                         const make = makeNodes[i].textContent;
                         const option = document.createElement('option');
                         option.value = make;
-                        option.textContent = make;
+                        option.textContent = make.substring(make.search(/[A-Z]/));
                         makeSelect.appendChild(option);
                     }
                 } else {
@@ -74,7 +74,7 @@ makeSelect.addEventListener('change', function() {
                         const model = modelNodes[i].textContent;
                         const option = document.createElement('option');
                         option.value = model;
-                        option.textContent = model;
+                        option.textContent = model.substring(model.search(/[A-Z]/));
                         modelSelect.appendChild(option);
                     }
                 } else {
