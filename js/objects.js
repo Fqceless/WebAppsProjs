@@ -1,3 +1,4 @@
+console.log('wtf2');
 class plan {
     constructor(planName, catYear, major, minor, studentName, currYear, currTerm, courseArray) {
         this.planName = planName;
@@ -97,12 +98,10 @@ function processPlan(response){
         }
     }
     
-    console.log(yearsArray);
 }
-console.log(yearsArray);
 
 function processReqs(response){
-    console.log('hi mom');
+    
     
 }
 

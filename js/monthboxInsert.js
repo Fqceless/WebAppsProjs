@@ -1,3 +1,5 @@
+console.log('wtf');
+
 for (let y of yearsArray) {
     for(let s of y.semesters){
         if(y == yearsArray[0]){
