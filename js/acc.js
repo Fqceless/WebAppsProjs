@@ -12,8 +12,6 @@ $(document).ready(function() {
   function processReqs(response){
     var accordion = $("#accordion");
     for (var c in response.categories) {
-      var courses = response.categories;
-      console.log(courses);
       var courseList = "";
       for (var i = 0; i < response.categories[c].courses.length; i++) {
         courseList += "<li>" + response.categories[c].courses[i] + "</li>";

@@ -41,10 +41,8 @@ $(document).ready(function() {
                 }
             }
         }
-        console.log('help')
     }
     function askCatalog(askingCourse, refCatalog, index){
-        
             if (askingCourse[index].id == refCatalog.courses.askingCourse[index].id){
                 askingCourse.name = refCatalog.courses.askingCourse[index].name;
                 
@@ -53,7 +51,6 @@ $(document).ready(function() {
     }
     setTimeout(function(){
         for (let y of yearsArray) {
-            console.log('ahhh');
             for(let s of y.semesters){
                 if(y == yearsArray[0]){
                     s = y.semesters[2];
