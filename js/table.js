@@ -9,18 +9,18 @@ $(document).ready(function() {
             processCat(response);
         }
     });
-    courselist = [];
-    function processReqs(response){
-        for (c2use in response.catalog.courses)
-        courselist[c2use] = response.catalog.courses[c2use];
-    }
-    console.log(data);
 
 
     function processCat(response){
+
+    let dataList = []
+    for (c in response.catalog.courses){
+        dataList.push(response.catalog.courses[c]);
+    }
+
     let catalogTable = $('#catalogTable').DataTable({
-        data: courselist,
-    columns: [
+        data: dataList,
+      columns: [
         { data: 'id', title: 'Course ID' },
         { data: 'name', title: 'Course Name' },
         { data: 'credits', title: 'Credits' },
