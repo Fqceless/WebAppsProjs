@@ -1,3 +1,4 @@
+//THIS FILE IS NO LONGER USED IN THE MAIN PROJECT
 let myform = document.getElementById("form");
 
 myform.addEventListener("submit", function (event) {

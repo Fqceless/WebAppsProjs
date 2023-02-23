@@ -1,5 +1,5 @@
 class plan {
-    constructor(planName, catYear, major, minor, studentName, currYear, currTerm) {
+    constructor(planName, catYear, major, minor, studentName, currYear, currTerm, courseArray) {
         this.planName = planName;
         this.catYear = catYear;
         this.major = major;
@@ -7,7 +7,7 @@ class plan {
         this.studentName = studentName;
         this.currYear = currYear;
         this.currTerm = currTerm;
-        this.courseArray = [];
+        this.courseArray = courseArray;
     }
 }
 
@@ -39,7 +39,41 @@ class year{
     }
 }
 
-let myPlan = new plan(
+let xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    let response = JSON.parse(this.responseText);
+    processResponse(response);
+    
+    // process the JSON data here
+  }
+};
+xhttp.open("GET", "http://judah.cedarville.edu/~knoerr/cs3220/termProject/getCombined.php", true);
+xhttp.setRequestHeader("Content-type", "application/json");
+xhttp.send();
+
+
+
+function processResponse(response){
+    if (response.categories == true){
+        let userPlan = new plan(
+            response.plan.name,
+            response.plan.catYear,
+            response.plan.major,
+            'Biblical Studies',
+            response.plan.student,
+            response.plan.currYear,
+            response.plan.currTerm,
+            response.plan.courses
+            );
+
+        console.log(response.plan);
+        console.log(userPlan);
+    }
+}
+
+//ANYTHING PAST HERE IS OBSOLETE, ONLY TO BE USED AS TEST DATA
+/*let myPlan = new plan(
     'Test Plan',
     '2022',
     'Computer Science',
@@ -151,4 +185,4 @@ yearsArray[4].semesters[0].courses.push(new course(
     'CS-4820',
     'Software Engineering II',
     '4'
-));
+));*/
