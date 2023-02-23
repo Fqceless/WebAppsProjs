@@ -3,10 +3,18 @@
 <head>
     <meta charset="utf-8">
     <title>Web Apps Project 1</title>
-    <link rel="stylesheet" href="CSS/inline1.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    
+    
     <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script src="//cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
     <script src="//code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="./CSS/inline2.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/mint-choc/jquery-ui.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+    
+
     <link rel="shortcut icon" type="image/x-icon" href="pictures/GRAPElogo.png">   
     
     <script src="js/basicFunctions.js"></script>
@@ -109,7 +117,7 @@
                 </select>
             </form>
         
-            <script src="./js/kbb.js"></script>
+            
             
             <h1>Links:</h1>
             <ul>
@@ -120,11 +128,27 @@
         </div>
 
         <div class="courseFinder">
-            
+            <div id="catalog">
+                <h2>Catalog Search</h2>
+                <input type="text" id="searchBox" placeholder="Search">
+                <table id="catalogTable">
+                  <thead>
+                    <tr>
+                      <th>Course ID</th>
+                      <th>Course Name</th>
+                      <th>Credits</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- catalog data will be dynamically added here -->
+                  </tbody>
+                </table>
+              </div>
             
         </div>
     </div>
     <script src="./js/kbb.js"></script>
+    <script src="./js/table.js"></script>
     
 </body>
 
