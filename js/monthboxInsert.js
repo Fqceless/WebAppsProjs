@@ -25,7 +25,7 @@ $(document).ready(function() {
         for (let c in response.plan.courses){
             for (let y of yearsArray){
                 if(response.plan.courses[c].year == y.yearNum){
-                    response.plan.courses[c] = askCatalog(response.plan.courses, response.catalog, c)
+                    response.plan.courses[c] = askCatalog(response.plan.courses[c], response.catalog)
                     switch(response.plan.courses[c].term){
                         case('Spring'):                           
                             y.semesters[0].courses.push(response.plan.courses[c]);
@@ -43,12 +43,10 @@ $(document).ready(function() {
         }
         console.log('help')
     }
-    function askCatalog(askingCourse, refCatalog, index){
-        
-            if (askingCourse[index].id == refCatalog.courses.askingCourse[index].id){
-                askingCourse.name = refCatalog.courses.askingCourse[index].name;
-                
-            }
+    function askCatalog(askingCourse, refCatalog){
+        id2try = askingCourse.id;
+        let index = refCatalog.courses.indexOf(id2try);          
+        askingCourse.name = refCatalog.courses[index].name;
         return askingCourse;
     }
     setTimeout(function(){
