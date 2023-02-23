@@ -44,8 +44,9 @@ $(document).ready(function() {
     }
     function askCatalog(askingCourse, refCatalog){
         id2try = askingCourse.id;
-        let index = refCatalog.courses.map(e => e.id).indexOf('id2try');    
-        askingCourse.name = refCatalog.courses[index].name;
+        let index = refCatalog.courses[id2try];   
+        console.log(index);
+        askingCourse.name = index.name;
         return askingCourse;
     }
     setTimeout(function(){
@@ -62,7 +63,7 @@ $(document).ready(function() {
             
                 for (let course of s.courses) {
                     monthbox += `
-                    <li>${course.id + course.name}</li>
+                    <li>${course.id + " " + course.name}</li>
                     `;
                 }
             
