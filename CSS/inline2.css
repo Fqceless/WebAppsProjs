@@ -119,9 +119,7 @@ html {
    }
    
    /*Upper Right Section CSS Styles*/
-   .schedule {
-        display: grid;
-   }
+  
    .grid-Schedule {
         display: grid;
        grid-template-areas:
