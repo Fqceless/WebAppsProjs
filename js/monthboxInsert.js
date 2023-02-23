@@ -64,7 +64,7 @@ $(document).ready(function() {
             
                 for (let course of s.courses) {
                     monthbox += `
-                    <li>${course.id}</li>
+                    <li>${course.id + course.name}</li>
                     `;
                 }
             
